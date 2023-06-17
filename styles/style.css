@@ -1,0 +1,60 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+} 
+ 
+ 
+input { 
+    border: none;    
+}
+ 
+.tableSection{ 
+    margin-top: 40px;
+} 
+.card-buttons button{ 
+    background-color: #a5a73e !important; 
+} 
+
+.card{ 
+    border-color: #a5a73e;
+}  
+.card-body span{ 
+    color: #a5a73e;
+} 
+#serachDiv{ 
+    margin-top: 100px;
+}
+#content{ 
+    position: absolute; 
+    right: 0;
+} 
+#headingResponsive{ 
+    display: none;
+}
+
+/* ,*/
+@media screen and (max-width: 769px) {
+    #slider,#content,#title  { 
+        position: static !important;
+        /* width: 100%  !important; */
+    }   
+    #title{ 
+        display: none;
+    } 
+    #headingResponsive{ 
+        display: block;
+    }
+    #content{ 
+        /* background-color: rebeccapurple; */
+    }
+    form{ 
+        padding: 40px 15px;
+    } 
+    #serachDiv{ 
+        margin-top: 40px;
+    } 
+    h1{ 
+        margin-bottom: 20px;
+    }
+}

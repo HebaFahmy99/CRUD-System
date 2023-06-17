@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud System</title>  
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+        <div class="row"> 
+            <div class="col-md-3 col-sm-12 position-fixed start-0 top-0 bottom-0" id="slider" style="background-color:#a5a73e">                       
+                <div class="d-flex flex-column h-100 justify-content-center">  
+                    <form action="">  
+                        <div id="headingResponsive">
+                            <h1 class="p-1 text-center text-white">CRUD SYSTEM</h1> 
+                        </div>
+
+                        <div class="mb-3"> 
+                            <input type="text" id="productName" class="form-control" placeholder="Product Name">
+                        </div> 
+                        <div id="productNameAlert" class="alert alert-danger d-none py-1">
+                            <p>Product name's First Character must be UpperCase.</p>
+                        </div>
+                        <div class=" mb-3"> 
+                            <input type="number"  id="productPrice" class="form-control" placeholder="Product Price">
+                        </div> 
+                        <div id="productPriceAlert" class="alert alert-danger d-none py-1">
+                            <p>Product price can not be less than 1K.</p>
+                        </div>
+                        <div class="mb-3">  
+                            <select name="" id="productCategory" class="form-select"> 
+                                <option value="TV">TV</option> 
+                                <option value="Mobile">Mobile</option> 
+                                <option value="Laptop">Laptop</option>
+                            </select>
+                        </div>  
+                        <div class="mb-3"> 
+                            <input type="text" id="productDescrption" class="form-control" placeholder="Product Description">
+                        </div>  
+                        <div class="d-grid gap-2"> 
+                            <button type="button" onclick="addProduct()" style="display: block;"  id="btn-add" class="btn btn-outline-light">Add Product</button>
+                            <button type="button" onclick="editProduct()" style="display: none;" id="btn-edit"  class="btn btn-outline-light">Edit Product</button>
+                            <button type="button" onclick=" clearForm()" class="btn btn-outline-light">Clear Form</button>
+                        </div>
+                    </form>
+                    </div>
+            </div> 
+            <div class="col-md-9 position-absolute end-0" id="content" > 
+                <div class="row">  
+                    <div class="col-12 position-fixed z-3 top-0 end-0" id="title" style="background-color:#a5a73e;"> 
+                        <h1 class="p-1 text-center text-white">CRUD SYSTEM</h1> 
+                    </div> 
+                    <div class="col-12" id="serachDiv"> 
+                        <input onkeyup="searchProduct()" id="searchInput" type="text" class="form-control w-75 mx-auto" placeholder="Search..">
+                    </div>
+                    <div class="col-12 mb-5 tableSection ">    
+                        <h1 id="paragraphInstead" class="text-center" style="color:#a5a73e;">No Products to Show!</h1>
+                        <div class="row g-1" id="cardsPlace"> 
+
+                        </div>
+                    </div>
+                </div>       
+        </div>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+    <script src="js/index.js"></script>
+</body>
+</html>
